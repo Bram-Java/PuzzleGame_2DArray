@@ -1,0 +1,49 @@
+/**************************************************/
+/* 10-stappenplan om dit project te personaliseren */
+/**************************************************/
+
+1. Vòòrdat je het project opent in NetBeans, geef de hoofdmap 
+   van het project een andere naam (via verkenner, Finder of iets soortgelijks)
+
+2. Open nu het project in NetBeans.
+
+3. In het projectvenster linksboven zie dat je de naam van het project
+   nog steeds 'PrefabFXMLProject' is.
+   Pas die naam aan door met de rechtermuistoets op 'PrefabFXMLProject' te klikken.
+    - Kies in het menu voor Rename...
+
+4. Pas de naam aan van de map met de broncode
+    - Klik met de rechtermuistoets op helloFX 
+    - Kies in het menu voor Refactor -> Rename... (of Ctrl-R)
+      en kies een naam die bij je project past
+
+5. Kies een goede naam voor je model en onthoud die naam.
+   In de uitleg hieronder gebruiken we 'Breuk' als voorbeeld.
+
+6. Pas de naam van de Controller aan zodat die begint met je naam uit stap 5
+   gevolgd door Controller of FXMLController bv. BreukController of BreukFXMLController
+    - Klik met de rechtermuistoets op Controller.java 
+    - Kies in het menu voor Refactor -> Rename... (of Ctrl-R)
+
+7. Pas ook de naam van de FMXLView aan zodat de naam uit stap 5 vooraan komt.
+   Voor kleine toepassingen is dat de naam van het model (bv. BreukFXMLView),
+   maar in grotere projecten kan je meer FXMLViews hebben en dus meer keuzes.
+    - Klik met de rechtermuistoets op die FXML en kies voor Rename...
+    - Dubbelklik op het bestand zodat het opent in de SceneBuilder
+        + klik links het paneel Hierarchy dicht
+        + klik links het paneel Controller open
+        + selecteer bij de Controller class de klasse uit stap 6
+        + druk op Ctrl-S om de wijzigingen te bewaren
+    - Dubbelklik op Main.java
+        + pas op regel 14 de bestandsnaam aan
+            FXMLLoader lader = new FXMLLoader(getClass().getResource("FXMLView.fxml"));
+
+8. Als je een doorlevend model hebt
+    + Maak de nodige klassen voor het model.
+    + Pas de controller aan met een setModel()-methode voor de topklasse van het model
+    + Maak in Main.java een object aan van deze topklasse
+      en injecteer die in de controller.
+
+9. Pas Model, View en Controller verder aan totdat je applicatie doet wat ze moet doen.
+
+10. Wees fier op jezelf!
